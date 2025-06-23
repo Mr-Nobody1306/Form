@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+</head>
+<style> 
+    *{
+        margin:0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    body{
+        background-image: url('login.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15% 0;
+        color: white;
+    }
+    .div{
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(10px);
+        width:350px;
+        border: 1px solid rgb(129, 129, 129);
+        border-radius: 15px;
+        padding: 50px 30px;
+
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        gap:5px;
+    }
+    input{
+        background-color: inherit;
+        border-left:0; 
+        border-right:0 ;
+        border-top: 0;
+        outline: none;
+        border-bottom: 2px solid rgb(164, 201, 3);
+    }
+    label{
+        text-align: left;
+    }
+    button{
+        background-color: white;
+        color: rgb(0, 110, 255);
+        width: 300px;
+        height: 40px;
+        border-radius: 20px;
+        text-decoration: underline;
+        border: 0;
+        align-self: center;
+        margin: 15px;
+        cursor: pointer;
+    }
+    button:active{
+        color: white;
+        background-color: rgb(0, 110, 255);
+    }
+    .reg{
+        text-align: center;
+    }
+    .reg::selection{
+        color: rgb(21, 255, 0);
+    }
+    .icon{
+        float: right;
+        background-image: url('user-64.webp');
+        background-size: 20px 20px;
+        width: 20px;
+        height: 20px;
+    }
+    .icon2{
+        float: right;
+        background-image: url('lock4-64.webp');
+        background-size: 20px 20px;
+        width: 20px;
+        height: 20px;
+    }
+    input[type="text"],input[type="password"]{color: white;}
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    a:hover{
+        color: rgb(21, 255, 0);
+    }
+    </style>
+<body>
+    <div class="div">
+        <h1 style="text-align: center;">Login</h1>
+        <form>
+            <div>
+                <label for="username" style="text-align: left;">Username</label>
+                <i class="icon"></i>
+            </div>
+            <input type="text"  name="username" id="username" >
+            <div style="margin-top: 10px;">
+            <label for="password">Password</label>
+            <i class="icon2"></i>
+            </div>
+            <input type="password"  name="password" id="password" ><br>
+            <div><br> 
+            <div style="display: flex;flex-direction: row;align-items: center; justify-content:space-between ;font-size: small;">
+                    <div>
+                        <input type="checkbox" name="Checkout"><label for="Checkout">&nbsp;&nbsp;Remember me</label>
+                    </div>
+                    <a href="#">Forgot your password?</a></div>
+            </div>
+            <button type="submit">Login</button>
+                <div class="reg">Don't have an account?<a href="signup.html"> Register</a></div>
+        </form>
+    </div>
+</body>
+</html>
